@@ -7,7 +7,7 @@
 # Purpose:                      get network info
 
 # Declaration
-net_info=$(ip a) 
+net_info="ip a" 
 
 # call
-echo $net_info > output.txt
+$net_info > output.txt
