@@ -6,13 +6,23 @@
 # Purpose:  making directories                     
 
 # Declare global variables
-directories=("dir1.txt" "dir2.txt" "dir3.txt" "dir4.txt")
+directories=(
+    [0]="./folder"
+    [1]="./folder/dir1" 
+    [2]="./folder/dir2" 
+    [3]="./folder/dir3" 
+    [4]="./folder/dir4"
+    )
 
-make_dir="mkdir"
 # Declare functions
 mk_dir(){
-    $make_dir ${directories[*]}
+    mkdir ${directories[*]}
+    touch ./folder/dir1/fileA
+    touch ./folder/dir2/fileB
+    touch ./folder/dir3/fileC
+    touch ./folder/dir4/fileD
+
+
 }
 # Main
-mk_dir 
-
+mk_dir
