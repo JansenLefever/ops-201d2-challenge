@@ -55,7 +55,7 @@ list_net(){
 
 options=("CPU INFO:" "RAM INFO:" "DISPLAY ADAPTER:" "NETWORK ADAPTER:" "BIOS:" "quit")
 
-#ps name
+#main
 lshw | grep name
 select opt in "${options[@]}"; do
     case $opt in
@@ -92,3 +92,4 @@ select opt in "${options[@]}"; do
         esac
     done     
 done
+#end
